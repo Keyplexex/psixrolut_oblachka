@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  flask-app:
+    build: .
+    ports:
+      - "5001:5000"
+    environment:
+      - COMPOSE_FILE_NAME=bad-docker-compose.yml
+      - SECRET_KEY=hardcoded_secret
+    volumes:
+      - /tmp:/tmp
+    command: python app.py
