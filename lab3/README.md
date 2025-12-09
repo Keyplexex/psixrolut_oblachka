@@ -27,7 +27,7 @@ jobs:
         
     - name: Show bad logging
       run: |
-        echo "⚠️  WARNING: This is a BAD PRACTICE"
+        echo "  WARNING: This is a BAD PRACTICE"
         echo "Hardcoded test credentials:"
         echo "  Username: admin"
         echo "  Password: Admin123!"
@@ -44,13 +44,13 @@ jobs:
         
     - name: Deploy simulation
       run: |
-        echo "🚀 STARTING DEPLOYMENT SIMULATION"
+        echo " STARTING DEPLOYMENT SIMULATION"
         echo ""
-        echo "📋 BAD PRACTICES DEMONSTRATED:"
-        echo "1. 🔓 Hardcoded secrets in logs"
-        echo "2. ⚠️  No condition checks before deploy"
-        echo "3. 🐌 Inefficient dependency installation"
-        echo "4. 🙈 Ignoring test failures"
+        echo " BAD PRACTICES DEMONSTRATED:"
+        echo "1.  Hardcoded secrets in logs"
+        echo "2.  No condition checks before deploy"
+        echo "3.  Inefficient dependency installation"
+        echo "4.  Ignoring test failures"
 ```
 
 ## "Хороший" CI/CD файл
