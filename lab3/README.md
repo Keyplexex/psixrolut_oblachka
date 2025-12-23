@@ -32,14 +32,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Install dependencies
-        run: npm install
+      - name: Fake install step
+        run: echo "Installing dependencies"
 
-      - name: Run tests (ignore errors)
-        run: npm test || true
+      - name: Fake tests (ignore errors)
+        run: echo "Running tests" || true
 
-      - name: Build project
-        run: npm run build
+      - name: Fake build
+        run: echo "Build completed"
 ```
 
 ## Недостатки
