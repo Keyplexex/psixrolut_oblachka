@@ -91,5 +91,5 @@ jobs:
 - оптимизированный запуск workflow
 - хорошая читаемость и готовность к масштабированию
 
-![bad-ci.yml](/psixrolut_oblachka/lab3/bad.png)
-![good-ci.yml](/psixrolut_oblachka/lab3/good.png)
+![bad-ci.yml](bad.png)
+![good-ci.yml](good.png)
