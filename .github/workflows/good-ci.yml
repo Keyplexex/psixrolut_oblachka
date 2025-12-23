@@ -14,8 +14,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: .cache
+          key: ${{ runner.os }}-cache-${{ github.run_id }}
+
       - name: Install dependencies
-        run: echo "Installing dependencies"
+        run: |
+          mkdir -p .cache
+          echo "Dependencies installed" > .cache/deps.txt
 
       - name: Run tests
         run: echo "Running tests"
