@@ -90,3 +90,6 @@ jobs:
 - правильная обработка ошибок
 - оптимизированный запуск workflow
 - хорошая читаемость и готовность к масштабированию
+
+![bad-ci.yml](/psixrolut_oblachka/lab3/bad.png)
+![good-ci.yml](/psixrolut_oblachka/lab3/good.png)
