@@ -67,25 +67,22 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20
-
-      - name: Cache node_modules
+      - name: Cache dependencies
         uses: actions/cache@v3
         with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+          path: .cache
+          key: ${{ runner.os }}-cache-${{ github.run_id }}
 
       - name: Install dependencies
-        run: npm ci
+        run: |
+          mkdir -p .cache
+          echo "Dependencies installed" > .cache/deps.txt
 
       - name: Run tests
-        run: npm test
+        run: echo "Running tests"
 
       - name: Build project
-        run: npm run build
+        run: echo "Build completed"
 ```
 
 ## Преимущества
